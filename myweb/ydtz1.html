@@ -1,0 +1,43 @@
+<!doctype html>     <!--此页只用于在浏览器上测试连接效果-->
+<html>
+<head>
+<meta charset="utf-8">
+<title>阅读通知公告</title>
+    <script src="jquery-1.4.1.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function () {
+            var id = getUrlParam('id');
+            $.get("http://localhost:8088/myweb/readtz.php?id="+id,
+            function(data,status){                    
+                alert("接收到数据！"+data+"  "+status);  
+                json=JSON.parse(data);                     
+                if(json.id=="0"){
+                    $("#xs").html("记录不存在！");  
+                }else{
+                    var str="id="+json.id+"<br>";
+                    str+="标题="+json.bt+"<br>";
+                    str+="内容="+json.nr+"<br>";
+                    str+="发布时间="+json.fbsj;
+                    $("#xs").html(str);  
+                }
+             });
+            function getUrlParam(name) {
+                //构造一个含有目标参数的正则表达式对象
+                var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+                //匹配目标参数
+                var r = window.location.search.substr(1).match(reg);
+                //返回参数值
+                if(r != null) {
+                    return decodeURI(r[2]);
+                }
+                return null;
+            }
+         });
+    </script>
+</head>
+
+<body>
+    <div id="xs">显示</div>
+    <a href="zjtz.html">增加通知</a> <a href="lltz.html">浏览通知</a> <a href="ydtz.html">阅读通知</a>
+</body>
+</html>
