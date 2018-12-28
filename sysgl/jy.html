@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>实验室 管理</title>
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.css" />
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js" ></script>
+    <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js" ></script>
+	<script type="text/javascript" src="js/my.js" ></script>
+	<link rel="stylesheet" href="css/mmenu.css" />
+	<link rel="stylesheet" href="css/style.css" />
+	<script type="text/javascript" src="js/jquery.mmenu.js" ></script>
+	<script type="text/javascript" src="js/jquery.mmenu.min.all.js" ></script>
+	<script type="text/javascript" src="js/jquery.mmenu.min.js" ></script>
+	<script type="text/javascript">
+		$(function(){
+			$("nav#menu").mmenu();
+		});
+	</script>
+</head>
+<body>
+	<div data-role = "page" data-theme="a">
+		<div data-role = "header">
+			<div><a href="#menu"><img src="img/logo.png"/></a></div>
+			<a href="" data-icon = "info" style="background-color: transparent;right: 0px;left:auto;border: none">1</a>
+			<nav id="menu">
+				<ul>
+					<li><a href="#">栏目一</a></li>
+					<li><a href="#">栏目二</a></li>
+					<li><a href="#">栏目三</a></li>
+					<li><a href="#">栏目四</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div data-role = "navbar">
+			<ul>
+				<li><a href="index.html" rel="external">首页</a></li>
+				<li><a href="sys.html" rel="external">实验室</a></li>
+				<li><a href="sb.html" rel="external">设备</a></li>
+				<li><a href="jy.html" rel="external">借用</a></li>
+			</ul>
+		</div>
+		<div data-role = "content">
+			<h1 align="center">设备借用</h1>
+			设备名称：
+			<select id="sbmc">
+				<option value="投影仪">投影仪</option>
+				<option value="电脑">电脑</option>
+			</select>
+			借用时间：
+			<input type="button"  id="zc" value="注册" data-inline= "true" />
+			<a data-role = "button" data-inline= "true" rel="external" data-rel = "back">返回</a>
+		</div>
+		<div data-role = "footer" data-position = "fixed" style="background-color:#abc ;" align="center">
+			<a href="sz.html" data-icon = "grid" rel="external"  style="color: #fbc; background-color: #0bc;">设置</a> 
+			<a href="tz.html" data-icon = "alert" rel="external">通知</a> 
+			<a href="bwl.html" data-icon = "gear" rel="external">备忘录</a> 
+			<a href="wd.html" data-icon = "star" rel="external">我的</a> 
+		</div>
+	</div>
+</body>
+</html>

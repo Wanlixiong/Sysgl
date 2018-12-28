@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>实验室 管理</title>
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.css" />
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js" ></script>
+    <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js" ></script>
+	<script type="text/javascript" src="js/my.js" ></script>
+	<script type="text/javascript">
+		$(function(){			
+			$("#sbtp").change(function(e){
+				var file=e.target.files[0];
+				var str="文件名="+file.name;
+				str+="\n文件大小="+file.size;
+				str+="\n文件类型="+file.type;
+				alert(str);
+				var fr=new FileReader();
+				fr.file=file;
+				//fr.readAsBinaryString(file);
+				//fr.readAsArrayBuffer(file);
+				fr.readAsDataURL(file);
+				fr.onload=function(e1){
+					var con=e1.target.result;
+					alert(con);
+				};
+			});
+		});
+	</script>
+</head>
+<body>
+	<div data-role = "page" data-theme="a">
+		<div data-role = "header">
+			<img src="img/logo.png"/>
+			<a href="" data-icon = "info" style="background-color: transparent;right: 0px;left:auto;border: none">1</a>
+		</div>
+		<div data-role = "navbar">
+			<ul>
+				<li><a href="index.html" rel="external">首页</a></li>
+				<li><a href="sys.html" rel="external">实验室</a></li>
+				<li><a href="sb.html" rel="external">设备</a></li>
+				<li><a href="jy.html" rel="external">借用</a></li>
+			</ul>
+		</div>
+		<div data-role = "content">
+			<h1 align="center">设备管理</h1>
+			设备名称：<input type="text" id="sbmc"/>
+			地点：<input type="text" id="dd"/>
+			类型：
+			<select id="sblx">
+				<option value="多媒体">多媒体</option>
+				<option value="计算机">计算机</option>
+			</select>
+			管理员：
+			<select id="sbgly">
+				<option value="张三">张三</option>
+				<option value="李四">李四</option>
+			</select>
+			设备图片：<input type="file" id="sbtp" accept="image/*"/>
+			<input type="button"  id="sbqd" value="确定" data-inline= "true" />
+			<a data-role = "button" data-inline= "true" rel="external" data-rel = "back">返回</a>
+		</div>
+		<div data-role = "footer" data-position = "fixed" style="background-color:#abc ;" align="center">
+			<a href="sz.html" data-icon = "grid" rel="external"  style="color: #fbc; background-color: #0bc;">设置</a> 
+			<a href="tz.html" data-icon = "alert" rel="external">通知</a> 
+			<a href="bwl.html" data-icon = "gear" rel="external">备忘录</a> 
+			<a href="wd.html" data-icon = "star" rel="external">我的</a> 
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>实验室 管理</title>
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.css" />
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js" ></script>
+    <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js" ></script>
+    
+    <script type="text/javascript">
+    	
+   		document.addEventListener('plusready', function(){
+   			//console.log("所有plus api都应该在此事件发生后调用，否则会出现plus is undefined。"
+   			
+   		});
+   		
+    </script>
+</head>
+<body>
+	<div data-role = "page" data-theme="a">
+		<div data-role = "header">
+			<img src="img/logo.png"/>
+			<a href="#pop" data-rel="popup" data-icon = "info" style="background-color: transparent;right: 0px;left:auto;border: none">1</a>
+			<div id="pop" data-role = "popup" data-position-to="window">这里将用代码显示</div>
+		</div>
+		<div data-role = "navbar">
+			<ul>
+				<li><a href="index.html" rel="external">首页</a></li>
+				<li><a href="sys.html" rel="external">实验室</a></li>
+				<li><a href="sb.html" rel="external">设备</a></li>
+				<li><a href="jy.html" rel="external">借用</a></li>
+			</ul>
+		</div>
+		<div data-role = "content">
+			<div class="ui-grid-a" align="center">
+				<div class="ui-block-a">
+					<img src="img/中兴通讯实验室.jpg" /><br />
+					<img src="img/电路分析实验室图片1.jpg" />
+				</div>
+				<div class="ui-block-b">
+					<img src="img/网络与安全实验室.jpg" /><br />
+					<img src="img/软件创新实验室图片1.jpg" />
+				</div>
+			</div>
+			<ul data-role = "listview" data-inset = "true" data-divider-theme = "b">
+				<li data-role = "list-divider">
+					设备管理<span class="ui-li-count">3</span>
+				</li>
+				<li>
+					<a href="#">
+						<img src="img/投影仪.jpg" />
+						<h3>投影仪</h3>
+						<p>
+							地点：实验实训中心601<br />
+							类型：多媒体   管理员：张三
+						</p>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="img/显微镜.jpg" />
+						<h3>显微镜</h3>
+						<p>
+							地点：实验实训中心601<br />
+							类型：化学   管理员：李四
+						</p>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="img/玻璃.jpg" />
+						<h3>玻璃</h3>
+						<p>
+							地点：实验实训中心601<br />
+							类型：化学   管理员：李四
+						</p>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div data-role = "footer" data-position = "fixed" style="background-color:#abc ;" align="center">
+			<a href="sz.html" data-icon = "grid" rel="external"  style="color: #fbc; background-color: #0bc;">设置</a> 
+			<a href="tz.html" data-icon = "alert" rel="external">通知</a> 
+			<a href="bwl.html" data-icon = "gear" rel="external">备忘录</a> 
+			<a href="wd.html" data-icon = "star" rel="external">我的</a> 
+		</div>
+	</div>
+</body>
+</html>

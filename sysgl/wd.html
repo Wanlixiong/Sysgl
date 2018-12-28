@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>实验室 管理</title>
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.css" />
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js" ></script>
+    <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js" ></script>
+    <script type="text/javascript" src="js/my.js" ></script>
+    <script type="text/javascript">
+    	$(function(){
+
+    	});
+   		
+    </script>
+</head>
+<body>
+	<div data-role = "page" data-theme="a">
+		<div data-role = "header">
+			<img src="img/logo.png"/>
+			<a href="" data-icon = "info" style="background-color: transparent;right: 0px;left:auto;border: none">1</a>
+		</div>
+		<div data-role = "navbar">
+			<ul>
+				<li><a href="index.html" rel="external">首页</a></li>
+				<li><a href="sys.html" rel="external">实验室</a></li>
+				<li><a href="sb.html" rel="external">设备</a></li>
+				<li><a href="jy.html" rel="external">借用</a></li>
+			</ul>
+		</div>
+		<div data-role = "content">
+			<h1 align="center">会员中心</h1>
+			<a href="#xxxg" data-role="button" data-inline = "true" data-rel="dialog">信息修改</a>
+			<input type="button" id="yhgl" value="用户管理" data-inline = "true"/>
+			<input type="button" id="tc" value="退出" data-inline = "true"/>
+			<div id="xxxs"></div>
+		</div>
+		<div data-role = "footer" data-position = "fixed" style="background-color:#abc ;" align="center">
+			<a href="sz.html" data-icon = "grid" rel="external"  style="color: #fbc; background-color: #0bc;">设置</a> 
+			<a href="tz.html" data-icon = "alert" rel="external">通知</a> 
+			<a href="bwl.html" data-icon = "gear" rel="external">备忘录</a> 
+			<a href="wd.html" data-icon = "star" rel="external">我的</a> 
+		</div>
+	</div>
+	<div data-role="page" id="xxxg">
+		<div data-role="header">
+			<h2>个人信息修改</h2>
+		</div>
+		<div data-role="content">
+			用户名：<input type="text" id="yhm" readonly/>
+			密码：<input type="password" id="mm"/>
+			密码确认：<input type="password" id="mm1"/>
+			<fieldset data-role = "controlgroup">
+				<legend>性别：</legend>
+				<input type="radio" name="xb" id="xb0" value="男" checked="checked"/>
+				<label for="xb0">男</label>
+				<input type="radio" name="xb" id="xb1" value="女"/>
+				<label for="xb1">女</label>
+			</fieldset>
+			邮箱：<input type="email" id="yx"/>
+			<input type="button"  id="xgqd" value="确定" data-inline= "true" />
+		</div>
+	</div>
+</body>
+</html>

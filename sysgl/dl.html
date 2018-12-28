@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>邢万里</title>
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.css" />
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js" ></script>
+    <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js" ></script>
+	<script type="text/javascript" src="js/my.js" ></script>
+	<style>
+		#main{
+			background-color: #D6D6D6; 			
+			margin: 50px 15px 15px;
+			border: solid 1px #00aabb;
+			border-radius:85px 40px 85px 40px;
+			box-shadow: 5px 5px 10px 5px #aaa;
+		}
+	</style>
+</head>
+<body>
+	<div data-role = "page" data-theme="a"  style="background-color: #99CCCC;">
+		<div data-role = "header">
+			<img src="img/logo.png"/>
+			<a href="" data-icon = "info" style="background-color: transparent;right: 0px;left:auto;border: none">1</a>
+		</div>
+		<div data-role = "navbar">
+			<ul>
+				<li><a href="index.html" rel="external">首页</a></li>
+				<li><a href="sys.html" rel="external">实验室</a></li>
+				<li><a href="sb.html" rel="external">设备</a></li>
+				<li><a href="jy.html" rel="external">借用</a></li>
+			</ul>
+		</div>
+		<div data-role = "content" id="main">
+			<h1 align="center" style="text-shadow: 4px 4px 10px #005599;"><img src="img/tb3.png" />会员登录</h1>
+			用户名：<input type="text" id="yhm" placeholder="请输入用户名！"/>
+			密码：<input type="password" id="mm" />
+			<input type="button" value="登录" id="dl" data-inline= "true" />
+			<a href="zc.html" data-role = "button" data-inline= "true" rel="external">注册</a>
+			<hr style="color: #22AADD; width: 90%;size: 1px;shape-inside: inherit;">
+			<h5 style="color: #0bc; text-align: center;">版权信息：邢万里 1395216987@qq.com</h5>
+		</div>
+		<div data-role = "footer" data-position = "fixed" style="background-color:#abc ;" align="center">
+			<a href="sz.html" data-icon = "grid" rel="external"  style="color: #fbc; background-color: #0bc;">设置</a> 
+			<a href="tz.html" data-icon = "alert" rel="external">通知</a> 
+			<a href="bwl.html" data-icon = "gear" rel="external">备忘录</a> 
+			<a href="wd.html" data-icon = "star" rel="external">我的</a> 
+		</div>
+	</div>
+</body>
+</html>

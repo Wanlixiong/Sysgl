@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>实验室 管理</title>
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.css" />
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js" ></script>
+    <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js" ></script>
+    <script type="text/javascript" src="js/my1.js" ></script>
+    <script type="text/javascript">
+    	
+   		document.addEventListener('plusready', function(){
+   			//console.log("所有plus api都应该在此事件发生后调用，否则会出现plus is undefined。"
+   			
+   		});
+   		
+    </script>
+</head>
+<body>
+	<div data-role = "page" data-theme="a" id="bwzy">
+		<div data-role = "header">
+			<img src="img/logo.png"/>
+			<a href="" data-icon = "info" style="background-color: transparent;right: 0px;left:auto;border: none">1</a>
+		</div>
+		<div data-role = "navbar">
+			<ul>
+				<li><a href="index.html" rel="external">首页</a></li>
+				<li><a href="sys.html" rel="external">实验室</a></li>
+				<li><a href="sb.html" rel="external">设备</a></li>
+				<li><a href="jy.html" rel="external">借用</a></li>
+			</ul>
+		</div>
+		<div data-role = "content">
+			<h2 align="center">我的备忘录</h2>
+			<ul id="show_bwl" data-role="listview" data-inset="true" data-filter="true" data-filter-placeholder="查询"></ul>
+			<a data-role = "button" data-inline="true" href="#xzbwl" data-rel = "dialog">新增备忘录</a>
+		</div>
+		<div data-role = "footer" data-position = "fixed" style="background-color:#abc ;" align="center">
+			<a href="sz.html" data-icon = "grid" rel="external"  style="color: #fbc; background-color: #0bc;">设置</a> 
+			<a href="tz.html" data-icon = "alert" rel="external">通知</a> 
+			<a href="bwl.html" data-icon = "gear" rel="external">备忘录</a> 
+			<a href="wd.html" data-icon = "star" rel="external">我的</a> 
+		</div>
+	</div>
+	<div data-role = "page" id="xzbwl">
+		<div data-role = "header">
+			<h1>新增备忘录</h1>
+		</div>
+		<div data-role = "content">
+			标题：<input type="text" id="bt"/>
+			内容：<textarea id="nr"></textarea>
+			<input type="button" id="zjqd" value="确定" data-inline = "true"/>
+		</div>
+	</div>
+	<div data-role = "dialog" id="xgbwl">
+		<div data-role = "header">
+			<h1>修改备忘录</h1>
+		</div>
+		<div data-role = "content">
+			标题：<input type="text" id="bt1"/>
+			内容：<textarea id="nr1"></textarea>
+			<input type="hidden" id="id"/>
+			<input type="button" id="xgbw" value="确定" data-inline = "true"/>
+			<input type="button" id="scbw" value="删除" data-inline = "true"/>
+		</div>
+		<div data-role = "footer">
+			<h6 id="fbsj"></h6>
+		</div>
+	</div>
+</body>
+</html>

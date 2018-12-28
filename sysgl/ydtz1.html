@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>实验室 管理</title>
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.css" />
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js" ></script>
+    <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js" ></script>
+       <script type="text/javascript">
+        $(function () {
+            var id = getUrlParam('id');
+            $.get("http://192.168.0.107:8088/myweb/readtz.php?id="+id,		
+            function(data,status){                    
+                alert("接收到数据！"+data+"  "+status);  
+                json=JSON.parse(data);                     
+                if(json.id=="0"){
+                    $("#xs").html("记录不存在！");  
+                }else{
+                    var str="id="+json.id+"<br>";
+                    str+="标题="+json.bt+"<br>";
+                    str+="内容="+json.nr+"<br>";
+                    str+="发布时间="+json.fbsj;
+                    $("#xs").html(str);  
+                    $("#bt").html(json.bt);
+                }
+             });
+            function getUrlParam(name) {
+                //构造一个含有目标参数的正则表达式对象
+                var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+                //匹配目标参数
+                var r = window.location.search.substr(1).match(reg);
+                //返回参数值
+                if(r != null) {
+                    return decodeURI(r[2]);
+                }
+                return null;
+            }
+         });
+    </script>
+    
+</head>
+<body>
+	<div data-role = "page" data-theme="a">
+		<div data-role = "header">
+			<img src="img/logo.png"/>
+			<a href="" data-icon = "info" style="background-color: transparent;right: 0px;left:auto;border: none">1</a>
+		</div>
+		<div data-role = "navbar">
+			<ul>
+				<li><a href="index.html" rel="external">首页</a></li>
+				<li><a href="sys.html" rel="external">实验室</a></li>
+				<li><a href="sb.html" rel="external">设备</a></li>
+				<li><a href="jy.html" rel="external">借用</a></li>
+			</ul>
+		</div>
+		<div data-role = "content">
+			<h1 align="center" id="bt">通知内容</h1>			
+			<a data-role="button" data-inline = "true" data-rel="back">返回</a>
+			<div id="xs"></div>
+		</div>
+		<div data-role = "footer" data-position = "fixed" style="background-color:#abc ;" align="center">
+			<a href="sz.html" data-icon = "grid" rel="external"  style="color: #fbc; background-color: #0bc;">设置</a> 
+			<a href="tz.html" data-icon = "alert" rel="external">通知</a> 
+			<a href="bwl.html" data-icon = "gear" rel="external">备忘录</a> 
+			<a href="wd.html" data-icon = "star" rel="external">我的</a> 
+		</div>
+	</div>
+</body>
+</html>
